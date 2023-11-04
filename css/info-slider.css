@@ -1,0 +1,72 @@
+/* 
+<div class="info-slider">
+   <span class="contact-info">
+    <strong>Address</strong>
+    <br>
+    <br>
+    PO Box 681, 
+    <br>
+     8942 N SENECA ST 
+    <br> 
+    Weedsport,  
+    <br>
+    NY 13166-9998
+    <br>
+    <br>
+    <strong>Email</strong>
+    <br>
+    <br>
+    SterlingConglomerate
+    <br>
+    @Gmail.com
+    <br>
+    <br>
+    <strong>Phone</strong>
+    <br>
+    <br>
+    (680)223-8961
+    </span>
+    </div>
+    */
+.info-slider {
+  position: fixed;
+  left: 0px;
+  top:0;
+  height: 100vh;
+  width: 75px;
+  background-color: #c0c0c0;
+  border: 2px solid black;
+  transition: width 1s;
+  text-align: center;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .info-slider {
+    display: none;
+  }
+}
+.info-slider:hover {
+  width: 275px;
+}
+.contact-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s 1.0s;
+}
+
+.info-slider:hover .contact-info {
+  visibility: visible;
+  opacity: 1;
+}
+
+footer {
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent); 
+ 
+}
+

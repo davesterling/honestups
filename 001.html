@@ -1,0 +1,94 @@
+
+<div id="product1">
+    <!-- Box 1 -->
+    <div class="product-box common">
+      <img
+        src="media/Insoles/Insoles-01.jpg"
+        alt="CAD Masterclass"
+        class="product-img"
+      />
+      <h2 class="product-title">Large Boot Blazers</h2>
+      <span class="price">$9.95</span>
+      <i class="bx bx-cart add-cart"></i>
+    </div>
+  </div>
+
+  <div class="product-popup" id="popup-product1">
+    <div class="popup-content">
+     <span class="popup-close">
+        <div class="popup-close-button" data-popup-id="popup-product1">X</div>
+     </span>
+<h1 class="popup-title product-title">Large Boot Blazers</h1>
+<div class="popup-columns">
+  <div class="popup-column popup-column-1">
+    <div class="slider-container" id="slider1">
+        <!-- First Slide -->
+        <div class="slide active-slide">
+            <div class="popup-image">
+                <img src="media/Insoles/Insoles-13.png" alt="CAD Masterclass" />
+                <p class="description">Reflects 97% of radiant heat</p>
+            </div>
+        </div>
+    
+        <!-- Second Slide -->
+        <div class="slide">
+            <div class="popup-image">
+                <img src="media/Insoles/Insoles-02.png" alt="Another Masterclass" />
+                <p class="description">Install underneath regular insoles</p>
+            </div>
+        </div>
+    
+        <!-- Add more slides as needed -->
+        <div class="slide">
+          <div class="popup-image">
+              <img src="media/Insoles/Insoles-09.png" alt="Another Masterclass" />
+              <p class="description">Double sided coating of reflective material</p>
+          </div>
+      </div>
+
+        <!-- Arrows -->
+
+        <button class="arrow prev" onclick="changeSlide('slider1', -1)">❮</button>
+        <button class="arrow next" onclick="changeSlide('slider1', 1)">❯</button>
+    
+        <div class="dot-container">
+            <span class="dot active-dot" onclick="currentSlide('slider1', 1)"></span>
+            <span class="dot" onclick="currentSlide('slider1', 2)"></span>
+            <span class="dot" onclick="currentSlide('slider1', 3)"></span>
+            <!-- Add more dots as needed -->
+
+        </div>
+
+      </div>
+
+
+  </div>     
+  <div class="popup-column popup-column-2">
+    <p class="features-title">Features:</p>
+    <ul>
+      <li>Reflects 97% of Radiant Heat</li>
+      <li>Soft Foam Core</li>
+      <li>Lightweight</li>
+      <li>Strands of support material embedded</li>
+      <li>Durable for long term use</li>
+      <li>Interchangeable</li>
+      <li>Trim to fit</li>
+    </ul>
+    <span class="price" style="color: black;" >$9.95</span>
+    <div class="availability-block">
+     <p class="availability-text">In Stock</p>   
+    </div>
+  </div>      
+</div>
+<i class="bx bx-cart add-cart"></i>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1OcKXsCcJrRwOlNjmB0cP9mO"
+  publishable-key="pk_live_51ORdlVCcJrRwOlNjZ6RB6YwDBcAZuYgd6JuoEsxnMQuwuVDJrbILKBKfktpxNrFMV0jzhboLF0JeG5YWswxhQTl300LQq1p7T9"
+>
+</stripe-buy-button>
+
+</div>
+</div>
+
+

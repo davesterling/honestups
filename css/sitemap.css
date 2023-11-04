@@ -1,0 +1,52 @@
+/*<div class="sitemap"> */
+
+
+
+@media (min-width: 768px) {
+    /* Split the sitemap into 3 columns with 5 items each */
+    .sitemap {
+      position:static;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      width: 100vw;
+      overflow-x: hidden;
+      margin-top: 2.5vh;
+      padding-bottom: 10vh;
+      background: linear-gradient(to top, rgb(0, 0, 0), transparent)
+    }
+    .sitemap a {
+      flex-basis: calc(33.33% - 20px);
+      font-size: 15pt;
+      margin-bottom: 1vh;
+      color: #fff;
+      text-decoration: none;
+    }
+    }
+    /* For screens up to 768px */
+    @media (max-width: 768px) {
+    /* Show only the selected links in one column */
+    .sitemap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      position: static;
+      width:100vw;
+      margin-top: 2.5vh;
+      padding-bottom: 10vh;
+      background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+      overflow-x: hidden;
+    }
+    .sitemap a {
+      flex-basis: 100%;
+      font-size: 15pt;
+      margin-bottom: 1vh;
+      color: #fff;
+      text-decoration: none;
+    }
+    .sitemap a:not(:nth-of-type(1)):not(:nth-of-type(2)):not(:nth-of-type(3)):not(:nth-of-type(4)):not(:nth-of-type(5)):not(:nth-of-type(13)) {
+      display: none;
+    }
+    }

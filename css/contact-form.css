@@ -1,0 +1,64 @@
+/* Updated form styling */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    background-color: #C0C0C0;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    overflow-y: hidden; 
+    overflow-x: hidden;
+    width: 70vw; /* default width for laptops */
+    height: 60vh; /* default height for laptops */
+    margin: auto;
+    margin-bottom: 10vh;
+    margin-top: -20vh;
+  }
+  
+  /* media query for phone screens */
+  @media only screen and (max-width: 770px) {
+    .form {
+      width: 75vw; /* full width for phone screens */
+      height: 75vh; /* full height for phone screens */
+    }
+  }
+  
+  /* media query for larger laptop screens */
+  @media only screen and (min-width: 771px) {
+    .form {
+      width: 40vw; /* adjust width for larger laptop screens */
+      height: 75vh; /* adjust height for larger laptop screens */
+    }
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .form-text {
+    margin-top: 2vh;
+    font-size: 5vh;
+    background: linear-gradient(#379343, #1f41e0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .form h2{
+    font-size: 3vh;
+  }
+  form input[type="text"],
+  
+  form textarea, form input {
+    width: 75%; /* Adjusted width */
+    height: 10%; /* Adjusted height */
+    background-color: #333; /* Dark grey background color */
+    color: white; /* Text color */
+  }
+  

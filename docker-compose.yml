@@ -1,0 +1,9 @@
+version: '3'
+services:
+  your_service:
+    image: conglomerate:latest
+    volumes:
+      - /etc/letsencrypt/:/usr/local/apache2/htdocs/certs/
+ 
+
+

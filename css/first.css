@@ -1,0 +1,7 @@
+.first{
+    max-width: 90vw; 
+    margin-left: 5vw; 
+    margin-top: calc(var(--video-height) - 8vh);  
+    justify-content: center; 
+    align-items: center;
+}

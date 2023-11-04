@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <meta
+      name="description"
+      content="Creating and Innovating for a Better Future"
+    />
+    <meta name="robots" content="noarchive" />
+    <meta name="Baiduspider" content="noarchive" />
+    <meta name="googlebot" content="noarchive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" type="image/x-icon" href="media/Insoles/BB-Logo.png" />
+  </head>
+  <script src="js/loader.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/chart.css" />
+  <link rel="stylesheet" type="text/css" href="css/sitemap.css" />
+  <link rel="stylesheet" type="text/css" href="css/hero.css" />
+  <link rel="stylesheet" type="text/css" href="css/loader.css" />
+  <link rel="stylesheet" type="text/css" href="css/header.css" />
+  <link rel="stylesheet" type="text/css" href="css/iframe.css" />
+  <link rel="stylesheet" type="text/css" href="css/body-gradient.css" />
+  <link rel="stylesheet" type="text/css" href="css/social-widget.css" />
+  <link rel="stylesheet" type="text/css" href="css/popup.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/popup.css" />
+  <link rel="stylesheet" type="text/css" href="css/comment-slider.css" />
+  <link rel="stylesheet" type="text/css" href="css/sizing.css" />
+  <link rel="stylesheet" type="text/css" href="css/rainbow-text.css" />
+  <link rel="stylesheet" href="css/speech-bubbles.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+  />
+
+  <!-- <script src="js/index.js"></script>-->
+
+  <!-- <script async defer src="https://apis.google.com/js/api.js"></script>-->
+  <!-- <script async defer src="https://accounts.google.com/gsi/client" onload="google.accounts.id.initialize({ client_id: CLIENT_ID, callback: gisLoaded })"></script>-->
+
+  <body>
+    <div id="site-content">
+      <header>
+        <div id="logo">
+          <img
+            src="media/Insoles/BB-Logo.png"
+            alt="Logo"
+            onclick="toggleSiteHeader()"
+          />
+          <div class="relative">
+            <a href="javascript:void(0);" onclick="redirect()">Boot Blazers</a>
+            <div class="speech up title-attached">back to home</div>
+          </div>
+          <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+        </div>
+        <span class="close-button" onclick="closeSiteHeader()">X</span>
+        <nav id="main-nav">
+          <a href="about.html">About</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="faq.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+      <div id="site-header">
+        <div style="margin-top: 20vh">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="faq.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="widget-container">
+          <div class="widget-toggle"></div>
+          <div class="social">
+            <a href="#" class="button-link facebook">facebook</a>
+            <a href="#" class="button-link instagram">instagram</a>
+            <a href="#" class="button-link linkedin">linkedin</a>
+
+            <!-- <a href="#" class="button-link twitter">twitter</a>-->
+          </div>
+        </div>
+      </div>
+      <div>
+        <video
+          autoplay
+          muted
+          loop
+          preload="auto"
+          id="video-element"
+          poster="media/Insoles/BB-HEADER-02.png"
+          playsinline
+          data-wf-ignore="true"
+          style="pointer-events: none"
+        >
+          <source src="#" type="video/mp4" />
+          <button id="play-button">&#9654;</button>
+        </video>
+
+        <div id="comment-slider"></div>
+
+        <div
+          style="font-size: 7vh; margin-top: 5vh; color: #fff"
+          id="total"
+        ></div>
+        <div
+          style="
+            font-size: 3.5vh;
+            margin-top: 1vh;
+            color: #fff;
+            margin-bottom: 40px;
+          "
+        >
+          Write a review today!
+        </div>
+
+        <div class="chart-container">
+          <div class="bar" id="bar1">
+            <div class="value-label" id="label1"></div>
+            <div class="stars" id="stars1">★</div>
+          </div>
+          <div class="bar" id="bar2">
+            <div class="value-label" id="label2"></div>
+            <div class="stars" id="stars1">★★</div>
+          </div>
+          <div class="bar" id="bar3">
+            <div class="value-label" id="label3"></div>
+            <div class="stars" id="stars1">★★★</div>
+          </div>
+          <div class="bar" id="bar4">
+            <div class="value-label" id="label4"></div>
+            <div class="stars" id="stars1">★★★★</div>
+          </div>
+          <div class="bar" id="bar5">
+            <div class="value-label" id="label5"></div>
+            <div class="stars" id="stars1">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-container">
+          <div class="rating">
+            <input type="radio" name="rating" id="rating-5" value="5" />
+            <label for="rating-5">★</label>
+            <input type="radio" name="rating" id="rating-4" value="4" />
+            <label for="rating-4">★</label>
+            <input type="radio" name="rating" id="rating-3" value="3" />
+            <label for="rating-3">★</label>
+            <input type="radio" name="rating" id="rating-2" value="2" />
+            <label for="rating-2">★</label>
+            <input type="radio" name="rating" id="rating-1" value="1" />
+            <label for="rating-1">★</label>
+          </div>
+          <div id="userInfo">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" required />
+            <label for="productDropdown">Product:</label>
+            <select id="productDropdown" required>
+              <option value="Boot Blazers">Boot Blazers</option>
+              <option value="Variety Pack">Variety Pack</option>
+              <option value="Mega Box">Mega Box</option>
+            </select>
+            <label for="reviewInput">Review:</label>
+            <textarea id="reviewInput" rows="4" required></textarea>
+          </div>
+          <button id="submitBtn" onclick="submitRating();">Submit Rating</button>
+
+        </div>
+      </div>
+      <div id="reviewBoxes" class="review-dropdown"></div>
+      <div id="viewMore" onclick="showMoreReviews()">View More</div>
+      <div class="sitemap">
+        <a href="reviews.html">Reviews</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
+        <a href="privacy.html">Terms of Use</a>
+
+        <!-- 
+          <a href="news">News</a>
+          <a href="shop.html">Products</a>
+          <a href="blog.html">Blog</a>
+          <a href="services.html">Services</a>
+          <a href="support.html">Support</a>
+          <a href="carreers.html">Careers</a>
+          <a href="testimonials">Testimonials</a>
+          <a href="training.html">Training</a>
+          <a href="login.html">Login</a>-->
+      </div>
+    </div>
+
+    <!--Html References for Common blocks-->
+    <script>
+      fetch("comment-slider.html")
+        .then((response) => response.text())
+        .then((content) => {
+          document.getElementById("comment-slider").innerHTML = content;
+        });
+    </script>
+    <script src="js/hero.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/social-widget.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/comment-slider.js"></script>
+    <script src="js/inactivity.js"></script>
+  </body>
+</html>

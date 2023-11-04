@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // Extracting values from form fields or any other source
+    var name = "faisal"; // Replace #name with the actual ID of the name field
+    var email = "faisalalilashari@gmail.com"; // Replace #email with the actual ID of the email field
+    var password = "123456"; // Replace #password with the actual ID of the password field
+
+    // Constructing the data to be sent to Google Sheets
+    var myData = {
+        'name': name,
+        'email': email,
+        'pass': password
+    };
+
+    var url = 'https://script.google.com/macros/s/AKfycbw5oTjfBYdP7TEqqIprT-CLHl4YS3djjXKKjnBRqKZbkfs_7CODZ8NWv96rwNwMGoqG/exec';
+
+    // Sending data to Google Sheets using AJAX
+    $.ajax({
+        url: url,
+        method: 'POST',
+        data: myData,
+        success: function(data) {
+            console.log(data);
+        }
+    });
+});
+
+</script>

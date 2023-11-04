@@ -1,0 +1,14 @@
+/* Add a CSS rule for the iframe */
+iframe {
+    width: 100%; /* Make it occupy the full width of the page */
+    height: auto; /* Let the height adjust based on content */
+    overflow: hidden;
+  }
+  
+  /* Media query to display the iframe on computers 
+  @media (min-width: 768px) {
+    iframe {
+      display: block; /* Show the iframe on computers 
+    }
+  }
+  */

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/media/HU-Logo.png" />
+
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/header-fixed.css" />
+    <link rel="stylesheet" href="css/social-widget.css" />
+    <link rel="stylesheet" href="css/podium.css" />
+    <link rel="stylesheet" href="css/new-nav-cart.css" />
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css"
+    />
+
+    <title>Honest Ups</title>
+  </head>
+  <body>
+    <!-- nav -->
+    <header>
+      <div id="logo">
+        <img src="/media/HU-Logo" onclick="redirect()" alt="Logo" />
+        <a href="javascript:void(0);" onclick="redirect()">Honest Ups</a>
+      </div>
+
+      <nav id="main-nav">
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <!-- <div id="cart-icon" class="relative"> -->
+
+      <div class="cart-icon-button">
+        <span class="bx bxs-trophy" id="cart-icon" data-quantity="0"></span>
+      </div>
+      <!-- </div> -->
+    </header>
+    <div id="site-header" style="padding-top: 10vh">
+      <div class="username-container">
+        <i class="bx bxs-trophy" id="tab-trophy" data-quantity="0"></i>
+        <span class="username">Username</span>
+      </div>
+      <div class="icons-container">
+        <div class="relative site-tab active-tab">
+          <span class="">Site</span>
+        </div>
+        <div class="relative cart-tab">
+          <span class="">Cart</span>
+        </div>
+        <div class="relative reward-tab">
+          <span class="">Rewards</span>
+        </div>
+      </div>
+
+      <!-- site links -->
+      <div class="links-container active-container">
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+
+      <!-- cart -->
+      <div class="cart-container">
+        <h2 class="cart-title">Stuff to Buy:</h2>
+        <!-- Content -->
+        <div class="cart-content"></div>
+        <!-- Total -->
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <!-- Buy Button -->
+        <button type="button" class="btn-buy">Pay Now</button>
+      </div>
+
+      <!-- rewards -->
+      <div class="rewards-container">
+        <h2 class="reward-title">Rewards:</h2>
+        <div class="reward-content"></div>
+      </div>
+
+      <div class="widget-container widget-active">
+        <div class="widget-toggle"></div>
+        <div class="social">
+          <a href="#" class="button-link facebook">facebook</a>
+          <a href="#" class="button-link instagram">instagram</a>
+          <a href="#" class="button-link linkedin">linkedin</a>
+          <!-- <a href="#" class="button-link twitter">twitter</a>-->
+        </div>
+      </div>
+    </div>
+    <!-- popup start -->
+    <div class="login-popup">
+      <h3 class="popup-text">Create an account for 10% off!</h3>
+
+      <!-- remove the prevent default in rewards.js line 47 to allow the form to submit  -->
+      <form action="" class="login-form">
+        <div>
+          <label for="username">Username</label>
+          <input type="text" class="username-input" name="username" required />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="email"
+            name="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" class="password" name="password" required />
+        </div>
+
+        <input type="submit" class="login-button" value="Login" />
+      </form>
+    </div>
+    <!-- popup end -->
+
+    <div class="divider-div">
+      <!-- sidebar -->
+
+      <section class="sidebar">
+        <div class="container leaderboard-container">
+          <div class="title">
+            <span>Leaderboard</span>
+          </div>
+
+          <div class="row">
+            <span>Rank</span>
+            <span>Name</span>
+            <span>Record</span>
+          </div>
+
+          <div class="leaderboard-items"></div>
+
+          <button class="showBtn">Next</button>
+        </div>
+      </section>
+
+      <!-- phone size sidebar  -->
+      <div id="slideOut">
+        <!--   // Tab -->
+        <div class="slideOutTab">
+          <div>
+            <p>i am tab.</p>
+          </div>
+        </div>
+        <div class="modal-content">
+          <section class="sidebar sidebar-mobile">
+            <div class="container leaderboard-container">
+              <div class="title">
+                <span>Leaderboard</span>
+              </div>
+
+              <div class="row">
+                <span>Rank</span>
+                <span>Name</span>
+                <span>Record</span>
+              </div>
+
+              <div class="leaderboard-items"></div>
+
+              <button class="showBtn">Next</button>
+            </div>
+          </section>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+      <!-- // Scroll content -->
+
+      <!-- main  -->
+      <div class="main-side">
+        <!-- podium section  -->
+        <section class="podium-section">
+          <div class="container">
+            <div class="podium-container" id="podium1">
+              <div class="podium">
+                <div class="firework"></div>
+                <div class="drape-rect"></div>
+                <div class="drape-triangle"></div>
+                <i class="bx bxs-trophy trophy-icon"></i>
+                <div class="trophy-text">#1</div>
+              </div>
+              <span>John Smith</span>
+            </div>
+
+            <div class="podium-container" id="podium2">
+              <div class="podium">
+                <div class="drape-rect"></div>
+                <div class="drape-triangle"></div>
+                <i class="bx bxs-trophy trophy-icon"></i>
+                <div class="trophy-text">#2</div>
+              </div>
+              <span>Samantha Johnson</span>
+            </div>
+            <div class="podium-container" id="podium3">
+              <div class="podium">
+                <div class="drape-rect"></div>
+                <div class="drape-triangle"></div>
+                <i class="bx bxs-trophy trophy-icon"></i>
+                <div class="trophy-text">#3</div>
+              </div>
+              <span>Alexander Rodriguez</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- tiktok iframe section -->
+        <section class="tiktok-section">
+          <div class="container">
+            <div>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@pahardii/video/7170999670242610459"
+                data-video-id="7170999670242610459"
+                style="max-width: 605px"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@pahardii"
+                    href="https://www.tiktok.com/@pahardii?refer=embed"
+                    >@pahardii</a
+                  >
+                  Enjoy nature without music 🎵❤️<a
+                    title="foryoupage"
+                    target="_blank"
+                    href="https://www.tiktok.com/tag/foryoupage?refer=embed"
+                    >#foryoupage</a
+                  >
+                  <a
+                    title="viralvideo"
+                    target="_blank"
+                    href="https://www.tiktok.com/tag/viralvideo?refer=embed"
+                    >#viralvideo</a
+                  >
+                  <a
+                    title="trending"
+                    target="_blank"
+                    href="https://www.tiktok.com/tag/trending?refer=embed"
+                    >#trending</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            <div class="text">
+              <h3>Honest Up challenge</h3>
+              <p>
+                To enter the pushup challenge, post and un-cut video of you
+                doing the most pushups with our product and showing the score
+                and tagging @Honestups. <br />
+                <br />
+                For other submissions of this challenge, submit them
+                <a href="#">here</a> <br />
+                <br />
+                <a href="" class="book"
+                  ><box-icon type="solid" color="red" name="book-alt"></box-icon
+                  >Check out the rule book</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- product video display section  -->
+        <section class="product-section">
+          <div class="container">
+            <div><iframe src="" frameborder="0"></iframe></div>
+            <div class="text">
+              <h3>Honest Ups</h3>
+              <p>
+                Get ready to maximize health when you get your Honest Ups
+                workout buddy to coach you through at home workouts. Beat your
+                friends with our competition referee feature that lets an
+                impartial third party determine the most atheltic one in the
+                squad.
+              </p>
+              <button class="button">Buy Today!</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- reddit iframe section  -->
+    <section class="reddit-section">
+      <div class="container">
+        <blockquote class="reddit-embed-bq" data-embed-height="502">
+          Posts from the
+          <a href="https://www.reddit.com/r/HonestUps/">honestups</a><br />
+          community on Reddit
+        </blockquote>
+        <script
+          async=""
+          src="https://embed.reddit.com/widgets.js"
+          charset="UTF-8"
+        ></script>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer>
+      <div class="sitemap">
+        <a href="Info.html">Info</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
+        <a href="privacy.html">Terms of Use</a>
+
+        <!-- 
+        <a href="news">News</a>
+        <a href="shop.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="services.html">Services</a>
+        <a href="support.html">Support</a>
+        <a href="carreers.html">Careers</a>
+        <a href="testimonials">Testimonials</a>
+        <a href="training.html">Training</a>
+        <a href="login.html">Login</a>-->
+      </div>
+    </footer>
+    <script src="js/header.js"></script>
+    <script src="js/social-widget.js"></script>
+    <script src="js/podium.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/headerTab.js"></script>
+    <script src="js/rewards.js"></script>
+
+    <!-- code for handling rewards  -->
+    <script>
+      document
+        .querySelector(".login-form")
+        .addEventListener("submit", function (event) {
+          let loginPop = document.querySelector(".login-popup");
+          let username = document.querySelector(".username-input").value;
+
+          event.preventDefault(); // prevent the form from submitting
+
+          addRewards({ id: 4, code: "WELCOME" + username });
+
+          // Create a new element for the success message
+          let popupText = document.querySelector(".popup-text");
+          popupText.classList.toggle("success");
+          popupText.innerHTML = "10% off coupon added!";
+
+          // Hide the form
+          document.querySelector(".login-form").style.display = "none";
+
+          // Remove the success message after 3 seconds
+          setTimeout(function () {
+            popupText.classList.add("fade");
+            loginPop.classList.remove("slide-popup");
+          }, 3000);
+        });
+
+      document.addEventListener("click", function (event) {
+        let loginPop = document.querySelector(".login-popup");
+
+        // Check if the click event's target is the popup or a descendant of the popup
+        if (!loginPop.contains(event.target)) {
+          // If it's not, close the popup
+          loginPop.classList.remove("slide-popup");
+        }
+      });
+
+      const slider = () => {
+        let loginPop = document.querySelector(".login-popup");
+        loginPop.classList.add("slide-popup");
+      };
+
+      slider();
+    </script>
+  </body>
+</html>

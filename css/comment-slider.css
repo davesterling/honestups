@@ -1,0 +1,103 @@
+.custom-comment-slider-container {
+    margin-top: calc(var(--video-height) - 8vh);
+    width: 100vw;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-slide {
+    width: 100vw;
+    display: none;
+}
+
+.active-custom-slide {
+    display: block;
+    animation: customSlideIn 2.5s ease;
+}
+
+.custom-dot-container {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.custom-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active-custom-dot {
+    background-color: #2fcf0f;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border: none;
+    outline: none;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.custom-prev {
+    left: 0;
+}
+
+.custom-next {
+    right: 0;
+}
+
+@keyframes customSlideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.custom-text-box {
+    font-style: italic;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 0;
+    max-width: 80vw;
+    margin-left: 10vw;
+    height: 13vh;
+    font-size: 4vw; /* Set initial font size using vw units */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media screen and (min-width: 480px) {
+    .custom-text-box {
+        height: 15vh; /* Adjust the height for larger screens */
+        font-size: 1.9vw; /* Adjust the font size for larger screens */
+    }
+}
+
+@media screen and (min-width: 20000px) {
+    .custom-text-box {
+        height: 20vh; /* Adjust the height for even larger screens */
+        font-size: 2vw; /* Adjust the font size for even larger screens */
+       bottom:25vh;
+    }
+}

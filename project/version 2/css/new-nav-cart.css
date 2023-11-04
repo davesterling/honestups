@@ -1,0 +1,170 @@
+#site-header {
+  padding: 1rem;
+  display: block;
+  color: white;
+  overflow: hidden;
+}
+
+.icons-container {
+  display: flex;
+}
+
+.icons-container span {
+  font-size: 16px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.icons-container > div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.cart-container {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.rewards-container {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+#site-header .links-container a {
+  padding: 1rem;
+}
+
+.active-container {
+  max-height: 100%;
+  transition: 0.5s;
+}
+
+.active-tab {
+  background: #292828;
+  border-radius: 8px;
+}
+
+.username-container {
+  margin: 24px 0;
+  font-size: 24px;
+  display: flex;
+  gap: 24px;
+}
+
+#tab-trophy[data-quantity] {
+  position: relative;
+  animation: bounce2 2s ease infinite;
+}
+
+#tab-trophy[data-quantity="0"] {
+  animation: none;
+}
+
+#cart-icon[data-quantity] {
+  position: relative;
+  animation: bounce2 2s ease infinite;
+}
+
+#cart-icon[data-quantity="0"] {
+  animation: none;
+}
+
+#tab-trophy[data-quantity]::after {
+  content: attr(data-quantity);
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  right: 0;
+  min-width: 20px; /* Changed from width to min-width */
+  min-height: 20px; /* Changed from height to min-height */
+  padding: 2px; /* Added padding to prevent content from touching the edges */
+  background: #c0c0c0;
+  border-radius: 50%;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce2 2s ease infinite;
+  border: 2px solid black;
+}
+
+#tab-trophy[data-quantity="0"]::after {
+  contain: "";
+  animation: none;
+}
+
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+.reward-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+.reward-card {
+  background: #292828;
+  width: 100%;
+  text-align: start;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.cart-box {
+  display: flex;
+}
+
+.cart-container {
+  overflow: hidden;
+}
+
+.cart-content {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.reward-title {
+  margin: 18px 0;
+}
+
+.widget-container {
+  display: none;
+}
+
+.widget-active {
+  display: flex;
+}
+
+@media screen and (max-width: 500px) {
+  #site-header .links-container a {
+    padding: 0.5rem;
+    font-size: 2.5vh;
+    z-index: 10;
+  }
+}

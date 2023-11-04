@@ -1,0 +1,62 @@
+.widget-container {
+    position: relative;
+    bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
+  
+  .widget-toggle {
+    content: "";
+    display: block;
+    width: 5vh;
+    height: 5vh;
+    margin-top:5vh;
+    border-radius: 50%;
+    background-color: #226d41; /* Dark green */
+    background-image: url("../media/Social.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-top: 1rem;
+  }
+  
+  .social.active {
+    opacity: 1;
+  }
+  .button-link {
+    padding: 0.5rem 1rem; /* Adjusted padding for a smaller button size */
+    margin-bottom: 1rem; /* Adjusted margin for spacing */
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  
+  
+  .facebook {
+    background-color: #226d41; /* Dark green */
+  }
+  
+  .instagram {
+    background-color: #3d8c58; /* Lighter shade of green */
+  }
+  
+  .linkedin {
+    background-color: #62a677; /* Even lighter shade of green */
+  }
+  
+  .twitter {
+    background-color: #86c69a; /* Lightest shade of green */
+  }
+  

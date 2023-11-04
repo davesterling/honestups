@@ -1,0 +1,252 @@
+.podium-section {
+  width: 100%;
+}
+.podium-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.podium-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: floatAnimation 6s infinite alternate;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.podium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.podium-container span {
+  /* background: #ffcd00; */
+  background-color: #c08864;
+  border: 2px solid black;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.container .podium-container:nth-child(2) {
+  width: 33%;
+  margin: auto;
+}
+
+.container .podium-container:nth-child(3) {
+  width: 33%;
+  margin: auto;
+}
+
+/* firework  */
+@keyframes firework {
+  0% {
+    transform: translate(-50%, 60vh);
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  50% {
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  100% {
+    width: 45vmin;
+    opacity: 0;
+  }
+}
+
+.firework,
+.firework::before,
+.firework::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background:
+        /* random backgrounds */ radial-gradient(
+        circle,
+        rgb(255, 213, 0) 0.2vmin,
+        #0000 0
+      )
+      50% 00%,
+    radial-gradient(circle, rgb(255, 213, 0) 0.3vmin, #0000 0) 00% 50%,
+    radial-gradient(circle, rgb(255, 213, 0) 0.5vmin, #0000 0) 50% 99%,
+    radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 99% 50%,
+    radial-gradient(circle, rgb(255, 213, 0) 0.3vmin, #0000 0) 80% 90%,
+    radial-gradient(circle, rgb(255, 213, 0) 0.5vmin, #0000 0) 95% 90%,
+    radial-gradient(circle, rgb(255, 213, 0) 0.5vmin, #0000 0) 10% 60%,
+    radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 31% 80%,
+    radial-gradient(circle, rgb(255, 213, 0) 0.3vmin, #0000 0) 80% 10%,
+    radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 90% 23%,
+    radial-gradient(circle, rgb(255, 213, 0) 0.3vmin, #0000 0) 45% 20%,
+    radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 13% 24%;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 2s forwards 1;
+  animation-delay: 8s;
+}
+
+.firework::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+
+.firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
+}
+
+.firework-1 {
+  right: 26%;
+  left: unset;
+  top: 20%;
+  animation-delay: 700ms;
+}
+
+.firework-2 {
+  left: 25%;
+  top: 60%;
+  animation-delay: 350ms;
+}
+
+@media screen and (max-width: 700px) {
+  .podium-section .container .podium-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .podium-section .container {
+    gap: 5rem;
+  }
+}
+
+/* pod-2  */
+.podium {
+  position: relative;
+  width: 120px;
+  height: 85px; /* Adjusted height */
+  background-color: #8b4513; /* Brown color */
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes popInAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.podium:nth-child(1) {
+  animation-delay: 0.75s; /* 1 second delay for the middle podium */
+}
+
+.podium:nth-child(2) {
+  animation-delay: 0s; /* No delay for the left podium */
+  margin-top: -30px; /* Move the middle podium up by 30px */
+}
+
+.podium:nth-child(3) {
+  animation-delay: 1.5s; /* 2 second delay for the right podium */
+  margin-left: 20px; /* Add space between the podiums */
+}
+
+.drape-rect {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px; /* Adjusted height */
+  background-color: red;
+}
+
+.drape-triangle {
+  position: absolute;
+  top: 30px; /* Adjusted top position */
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg); /* Rotate 180 degrees */
+  width: 0;
+  height: 10px; /* Adjusted height */
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 30px solid red; /* Adjusted height */
+}
+
+/* Trophy Icon */
+.trophy-icon {
+  color: gold;
+  position: absolute;
+  bottom: 80px; /* Adjusted position */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 65px; /* Increased size */
+}
+
+.trophy-text {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 14px; /* Adjusted size */
+  font-weight: bold; /* Bold */
+}
+
+.podium-container:nth-child(2) .podium {
+  height: 70px;
+}
+
+.podium-container:nth-child(2) .podium .trophy-icon {
+  bottom: 65px;
+}
+
+.podium-container:nth-child(2) .podium .drape-rect {
+  height: 20px;
+}
+
+.podium-container:nth-child(2) .drape-triangle {
+  top: 20px;
+}
+
+.podium-container:nth-child(3) .podium {
+  height: 60px;
+}
+
+.podium-container:nth-child(3) .podium .trophy-icon {
+  bottom: 55px;
+}
+
+.podium-container:nth-child(3) .podium .drape-rect {
+  height: 10px;
+}
+
+.podium-container:nth-child(3) .drape-triangle {
+  top: 10px;
+}

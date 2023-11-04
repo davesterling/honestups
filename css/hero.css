@@ -1,0 +1,78 @@
+:root {
+    --video-height: 60vh; /* Set a default maximum value for video height */
+}
+
+/* Style for the video */
+video {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    object-fit: cover;
+    max-height: 60vh;
+    height: var(--video-height); /* Set the actual height based on the variable */
+}
+
+/* Define heights and positions for each section */
+#section1 {
+    margin-top: calc(var(--video-height) - 8vh); /* Adjust margin-top based on actual video height */
+    height: auto; /* Adjust the height to start from the bottom of the video */
+    font-size: 6vh;
+}
+
+#section2 {
+    height: auto;
+   
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+#section3 {
+    height: auto;
+    font-style: bold;
+
+    font-size: 1.5vh;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    display: none;
+    z-index: 5;
+}
+.play-button:hover {
+    background-color: #3366ff; /* Accent color on hover */
+}

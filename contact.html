@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Contact Us</title>
+  <meta name="description" content="Creating and Innovating for a Better Future">
+  <meta name="robots" content="noarchive" />
+  <meta name="Baiduspider" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1, user-scalable=no">
+
+  <link rel="icon" type="image/x-icon" href="media/HU-Logo"> 
+ 
+  <link rel="stylesheet" type="text/css" href="css/hoverglow.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" type="text/css" href="css/sitemap.css">
+  <link rel="stylesheet" type="text/css" href="css/info-slider.css">
+  <link rel="stylesheet" type="text/css" href="css/contact-form.css">
+  <link rel="stylesheet" type="text/css" href="css/header-fixed.css">
+  <link rel="stylesheet" type="text/css" href="css/body-gradient.css">
+  <link rel="stylesheet" type="text/css" href="css/social-widget.css">
+  <link rel="stylesheet" type="text/css" href="css/speech-bubbles.css">
+  <link rel="stylesheet" href="css/new-nav-cart.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"/>
+
+  <!-- <script src="js/index.js"></script>-->
+  
+  <!-- <script async defer src="https://apis.google.com/js/api.js"></script>-->
+  <!-- <script async defer src="https://accounts.google.com/gsi/client" onload="google.accounts.id.initialize({ client_id: CLIENT_ID, callback: gisLoaded })"></script>-->
+  <!--<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>-->
+</head>
+
+
+
+<body>
+  <div id="site-content">
+      <header>
+      <div id="logo">
+        <img src="/media/HU-Logo" alt="Logo" />
+        <a href="javascript:void(0);" onclick="redirect()">Honest Ups</a>
+      </div>
+
+      <span class="close-button" onclick="closeSiteHeader()">X</span>
+      <nav id="main-nav">
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <!-- <div id="cart-icon" class="relative"> -->
+
+      <div class="cart-icon-button">
+        <span class="bx bxs-trophy" id="cart-icon" data-quantity="0"></span>
+      </div>
+      <!-- </div> -->
+    </header>
+    <div id="site-header" style="padding-top: 10vh">
+      <div class="username-container">
+        <i class="bx bxs-trophy" id="tab-trophy" data-quantity="0"></i>
+        <span class="username">Username</span>
+      </div>
+      <div class="icons-container">
+        <div class="relative site-tab active-tab">
+          <span class="">Site</span>
+        </div>
+        <div class="relative cart-tab">
+          <span class="">Cart</span>
+        </div>
+        <div class="relative reward-tab">
+          <span class="">Rewards</span>
+        </div>
+      </div>
+
+      <!-- site links -->
+      <div class="links-container active-container">
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!-- cart -->
+      <div class="cart-container">
+        <h2 class="cart-title">Stuff to Buy:</h2>
+        <!-- Content -->
+        <div class="cart-content"></div>
+        <!-- Total -->
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <!-- Buy Button -->
+        <button type="button" class="btn-buy">Pay Now</button>
+      </div>
+
+      <!-- rewards -->
+      <div class="rewards-container">
+        <h2 class="reward-title">Rewards:</h2>
+        <div class="reward-content"></div>
+      </div>
+
+      <div class="widget-container widget-active">
+        <div class="widget-toggle"></div>
+        <div class="social">
+          <a href="#" class="button-link facebook">facebook</a>
+          <a href="#" class="button-link instagram">instagram</a>
+          <a href="#" class="button-link linkedin">linkedin</a>
+          <!-- <a href="#" class="button-link twitter">twitter</a>-->
+        </div>
+      </div>
+    </div>
+
+  <video autoplay muted loop preload="auto" id="video-element"  poster="media/BB-Header.png" playsinline data-wf-ignore="true" style="pointer-events: none;">
+    <source src="#" type="video/mp4"><button id="play-button">&#9654;</button>
+</video>
+  <!--
+  <div class="form">
+    <div class="form-container">
+          <div class="contact-child child2">
+             <div class="inside-contact">
+              <br><br><br>
+                <h1 class="form-text">Submit Inquiry</h1>
+                <h3>
+                <span id="confirm">
+                </h3>
+                <form action="" method="post">
+                <h2>Name *</h2>
+                <input id="txt_name" type="text" Required="required">
+                <h2>Email </h2>
+                <input id="txt_email" type="text">
+                <h2>Message *</h2>
+                <textarea id="txt_message" rows="4" cols="20" Required="required" ></textarea>
+                <br><br>
+                
+                <input class="send" type="submit" id="btn_send" value="SEND">
+                <br><br>
+                </form>
+                <br><br>
+          </div>
+       </div>
+    </div>
+   </div> 
+-->
+<!-- Add an id attribute to the form for easier access -->
+
+<div class="form">
+  <form id="contactForm">
+    <div class="form-container">
+      <h1 class="form-text">Contact Support</h1>
+        <label for="name"><h2>Name:</h2></label>
+          <input type="text" id="name" name="name" required><br>
+          <div class="title" id="nameError"></div> 
+        <label for="email"><h2>Email:</h2></label>
+          <input type="email" id="email" name="email" required><br>
+          <div class="title" id="emailError"></div>
+        <label for="message"><h2>Message:</h2></label>
+          <textarea id="message" name="message" cols="20" rows="4" required></textarea><br>
+          <div class="title" id="messageError"></div>
+        <button class="glow-on-hover" type="button" value="Submit" onclick="validateForm();">Submit</button>
+      </div>
+    </form>
+          <div id="thankYouMessage" style="display: none;">
+            <h2>Thank you for your message, we will get back to you soon!<h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <div class="info-slider">
+   <span class="contact-info">
+    <strong>Address</strong>
+    <br>
+    <br>
+    PO Box 681, 
+    <br>
+     8942 N SENECA ST 
+    <br> 
+    Weedsport,  
+    <br>
+    NY 13166-9998
+    <br>
+    <br>
+    <strong>Email</strong>
+    <br>
+    <br>
+    Sterlingconglomerate@gmail.com
+    <br>
+    <br>
+    <strong>Phone</strong>
+    <br>
+    <br>
+    (680)223-8961
+    </span>
+    </div>
+</div>
+
+
+  
+ <!--<div class="hero-content">
+      <h1 class="hero-title"></h1>
+      <p class="hero-subtitle"></p>
+</div>-->
+
+ <div class="sitemap">
+  <a href="info.html">info</a>
+  <a href="about.html">About Us</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="faq.html">FAQs</a>
+  <a href="privacy.html">Terms of Use</a>
+ </div>   
+        
+        
+        
+        
+  <script src="js/hoverglow.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/social-widget.js"></script>
+<script src="js/inactivity.js"></script>
+<script src="js/main.js"></script>
+<script src="js/headerTab.js"></script>
+<script src="js/rewards.js"></script>
+
+</body>
+       
+</html>

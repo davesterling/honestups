@@ -1,0 +1,15 @@
+:root{
+    --color-01:#e0ff64;
+    --color-02:#0400ff;
+    --color-03:#222231;
+    --color-04:#0d0f26;
+    --color-05:#fff;
+  }
+
+  :root{
+    --main-color:#647bff;
+    --container-color:#171b3c;
+    --heading-color:#222231;
+    --box-color:#0d0f26;
+    --bg-color:#fff;
+  }
